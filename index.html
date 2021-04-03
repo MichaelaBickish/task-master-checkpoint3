@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Michaela's Task Master Checkpoint</title>
 </head>
@@ -36,11 +37,11 @@
                         <div class="ml-3">
                             <label for="color">List Color</label>
                             <select class="custom-select" id="color" aria-label="color select" required>
-                                <option value=`${primary}`>Blue</option>
-                                <option value=`${secondary}`>Pink</option>
-                                <option selected value=`${danger}`>Red</option>
-                                <option selected value=`${success}`>Green</option>
-                                <option selected value=`${warning}`>Orange</option>
+                                <option value='bg-primary' class="text-primary">Blue</option>
+                                <option value= 'bg-secondary' class="text-secondary">Pink</option>
+                                <option selected value= 'bg-danger' class="text-danger">Red</option>
+                                <option selected value='bg-success' class="text-success">Green</option>
+                                <option selected value='bg-warning' class="text-warning">Orange</option>
                             </select>
                         </div>
                         <div class="ml-3 d-flex align-items-end">
@@ -52,7 +53,7 @@
             </div>
         </div>
         
-        <div class="row" id="lists">
+        <div class="row align-items-center" id="lists">
             <!-- list template injected here -->
         </div>
     </main>

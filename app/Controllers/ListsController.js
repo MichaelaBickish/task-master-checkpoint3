@@ -10,6 +10,7 @@ function _draw() {
     template += '<div class="col text-center"><p><em>no lists to display</em><p></div>'
   }
 
+//   NOTE quan logic for check box will go here
   
   lists.forEach(l => template += l.Template)
   document.getElementById("lists").innerHTML = template
@@ -20,11 +21,11 @@ function _draw() {
 export default class ListsController {
   constructor() {
     ProxyState.on("lists", _draw);
-    //ProxyState.on("tasks", _draw);
+    ProxyState.on("tasks", _draw);
     _draw()
   }
 
-  
+
   addList(event) {
     window.event.preventDefault()
     let form = window.event.target
@@ -34,8 +35,11 @@ export default class ListsController {
     }
     listsService.addList(rawList)
     
-    
     form.reset()
+  }
+
+  deleteList(id) {
+    listsService.deleteList(id)
   }
 
 }
