@@ -35,6 +35,8 @@ class TasksService {
   ProxyState.tasks.find(i => i.id === id).checked = bool
       saveState()
       ProxyState.tasks = ProxyState.tasks
+      //Find the task that matches the id passed through & set 'checked' property equal to bool passed through.
+      //save state and alert the listeners.
   }
 }
 

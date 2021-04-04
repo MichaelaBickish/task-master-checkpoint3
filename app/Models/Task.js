@@ -16,5 +16,6 @@ export default class Task {
   }
 //NOTE If task's checkbox is checked, use a ternary in template ->
 //  if a task's "checked" property if true, it injects the 'checked' attribute onto the input element !!!
+//  pass the bool through as a parameter on click.
 }
  
