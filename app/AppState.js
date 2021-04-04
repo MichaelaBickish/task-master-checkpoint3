@@ -12,13 +12,6 @@ class AppState extends EventEmitter {
 
 
 
-
-
-
-
-
-
-
 export const ProxyState = new Proxy(new AppState(), {
   get(target, prop) {
     isValidProp(target, prop)

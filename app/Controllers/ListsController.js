@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { listsService } from "../Services/ListsService.js";
+import { loadState } from "../Utils/LocalStorage.js";
 
 
 //Private
@@ -10,21 +11,18 @@ function _draw() {
     template += '<div class="col text-center"><p><em>no lists to display</em><p></div>'
   }
 
-//   NOTE quan logic for check box will go here
-  
   lists.forEach(l => template += l.Template)
   document.getElementById("lists").innerHTML = template
 }
-
 
 //Public
 export default class ListsController {
   constructor() {
     ProxyState.on("lists", _draw);
     ProxyState.on("tasks", _draw);
+    loadState(),
     _draw()
   }
-
 
   addList(event) {
     window.event.preventDefault()
@@ -34,7 +32,6 @@ export default class ListsController {
         color: form['color'].value
     }
     listsService.addList(rawList)
-    
     form.reset()
   }
 

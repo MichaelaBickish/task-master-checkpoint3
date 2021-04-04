@@ -1,4 +1,6 @@
+import { ProxyState } from "../AppState.js";
 import { tasksService } from "../Services/TasksService.js";
+import { saveState } from "../Utils/LocalStorage.js";
 
 
 //Public
@@ -21,14 +23,8 @@ export default class TasksController {
     tasksService.deleteTask(id)
   }
 
-  taskCheckBox(){
-    let taskNums = 0
-    let ckBox = document.getElementById('task-ck-box')
-    if (ckBox.checked){
-      console.log("Yes checked"); //when checked
-    }else{
-      console.log("Not checked"); //when not checked
+  taskCheckBox(bool, id){
+     tasksService.taskCheckBox(bool, id)
     }
-}
 
 }

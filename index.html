@@ -24,7 +24,7 @@
 
 
     <main class="container-fluid">
-        <!-- the form submission will go here -->
+        <!-- the form submission -->
         <div class="row my-3">
             <div class="col">
                 <form class=" rounded p-3" onsubmit="app.listsController.addList(event)">
@@ -32,16 +32,16 @@
                         <div>
                             <label for="name">List Name</label>
                             <input type="text" name="name" id="name" class="form-control" placeholder="List Name..."
-                                aria-describedby="helpId" required min="3" max="15">
+                                aria-describedby="helpId" required minlength="3" maxlength="15">
                         </div>
                         <div class="ml-3">
                             <label for="color">List Color</label>
                             <select class="custom-select" id="color" aria-label="color select" required>
                                 <option value='bg-primary' class="text-primary">Blue</option>
-                                <option value= 'bg-secondary' class="text-secondary">Pink</option>
-                                <option selected value= 'bg-danger' class="text-danger">Red</option>
-                                <option selected value='bg-success' class="text-success">Green</option>
-                                <option selected value='bg-warning' class="text-warning">Orange</option>
+                                <option value='bg-secondary' class="text-secondary">Pink</option>
+                                <option value='bg-danger' class="text-danger">Red</option>
+                                <option value='bg-success' class="text-success">Green</option>
+                                <option value='bg-warning' class="text-warning">Orange</option>
                             </select>
                         </div>
                         <div class="ml-3 d-flex align-items-end">
@@ -62,11 +62,12 @@
     <footer class="container-fluid text-dark">
         <div class="row text-center">
             <div class="col">
-                <p><small>Made with love by mickBick</small></p>
+                <p><small>Made by mickBick</small></p>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
